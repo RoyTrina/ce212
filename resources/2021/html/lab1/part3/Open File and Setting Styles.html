@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Open File and Setting Styles</title>
+</head>
+<script>
+    let w;
+
+    function openFile(url) {
+        w = window.open();
+        w.location = url;
+    }
+
+    function changeStyle(style) {
+        w.document.getElementById("myList").setAttribute("class", style);
+    }
+</script>
+<body>
+<a href="javascript:openFile('/resources/2021/html/lab1/part2/Lists.html')">Open Lists.html in Popup</a>
+<br/>
+<a href="javascript:changeStyle('')">Default</a>
+<br/>
+<a href="javascript:changeStyle('navcontainer')">Inline</a>
+</body>
+</html>

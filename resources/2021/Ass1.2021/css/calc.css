@@ -1,0 +1,37 @@
+* {
+    font-family: Verdana, sans-serif;
+}
+
+body {
+    text-align: center;
+    font-size: large;
+    background-color: mediumpurple;
+}
+
+h2 {
+    background-color: #8c23a1;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid midnightblue;
+    background: mediumslateblue;
+    text-align: center;
+    width: 240px;
+}
+
+
+.number, .symbol, .equal, .clear, .lastAnswer, .dot {
+    background-color: darkblue;
+    color: white;
+    border: solid black 2px;
+    width: 100%;
+    font-weight: bold;
+}
+
+#answer {
+    background-color: plum;
+    border: solid black 2px;
+    width: 100%;
+}

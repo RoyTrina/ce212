@@ -1,0 +1,44 @@
+* {
+    font-family: Verdana, sans-serif;
+}
+
+h2 {
+    text-align: center;
+    background: lightgoldenrodyellow;
+}
+
+body {
+    text-align: center;
+    background: khaki;
+}
+
+.temp_form {
+    display: inline-block;
+}
+
+#ex1 {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+#ex1 tr {
+    text-align: center;
+}
+
+pre {
+    margin: 2em;
+    background: gold;
+    padding: 1em;
+    border: 1px solid orangered;
+}
+
+tr.even {
+    background: darkgoldenrod;
+}
+
+tr.odd {
+    background: orange;
+
+}

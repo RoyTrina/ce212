@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <title>Open Window and Load File</title>
+    <script type="text/javascript">
+        let w;
+        let counter;
+        let pre;
+        let arr;
+
+        function openFile(url) {
+            w = window.open();
+            w.location = url;
+        }
+
+        function upperCase(node) {
+            if (node.nodeType === Node.ELEMENT_NODE) {
+                for (let m = node.firstChild; m != null; m = m.nextSibling)
+                    upperCase(m);
+            } else if (node.nodeType === Node.TEXT_NODE) {
+                node.data = node.data.toUpperCase();
+            }
+        }
+
+        function retrieveText() {
+            arr = [];
+            pre = document.getElementById("count");
+            counter = 0;
+            retrieve(w.document.body);
+            let list = document.getElementById("list");
+            for (let i = 0; i < arr.length; i++) {
+                const item = document.createElement("li");
+                list.appendChild(item);
+                item.appendChild(document.createTextNode(arr[i]));
+            }
+            pre.parentNode.insertBefore(list, pre);
+            pre.textContent = "Found " + counter + " text nodes";
+
+        }
+
+        function retrieve(node) {
+            if (node.nodeType === Node.ELEMENT_NODE) {
+                for (let m = node.firstChild; m != null; m = m.nextSibling)
+                    retrieve(m);
+            } else if (node.nodeType === Node.TEXT_NODE)
+                if (node.data.length > 1)
+                    arr[counter++] = node.data;
+        }
+    </script>
+
+</head>
+<body>
+<p>Filename: <label for="url">Filename: </label><input id="url" name="url" size=15 type="Text"/></p>
+<a href="javascript:openFile(document.getElementById('url').value)">Open document</a><br>
+<a href="javascript:upperCase(w.document.body)">To upper case</a><br/>
+<a href="javascript:retrieveText(w.document.body)">Retrieve text</a><br/>
+<ul id="list"></ul>
+<pre id="count"> &nbsp; </pre>
+<br/>
+</body>
+</html>

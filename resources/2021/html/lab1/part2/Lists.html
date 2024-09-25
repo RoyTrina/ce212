@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Language" content="en-gb">
+    <title>List Fun CSS</title>
+    <link rel="stylesheet" type="text/css" href="lists.css">
+    <style>
+        h2 {
+            text-align: center;
+            color: blue
+        }
+
+        body {
+            margin: 4em
+        }
+
+        h3 {
+            color: navy
+        }
+
+        td {
+            text-align: center
+        }
+
+        .nav_container ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            text-align: center;
+        }
+
+        .nav_container ul li {
+            display: inline;
+        }
+
+        .nav_container ul li a {
+            text-decoration: none;
+            padding: .2em 1em;
+            color: #fff;
+            background-color: #036;
+        }
+
+        .nav_container ul li a:hover {
+            color: #fff;
+            background-color: #369;
+        }
+
+        .noBullet ul {
+            list-style-type: none;
+
+        }
+
+        .noBullet ul li {
+            color: #eef;
+            background-color: lightcoral;
+        }
+
+        .noBullet div a {
+            color: red;
+            background-color: green
+        }
+
+    </style>
+
+    <script type="text/javascript">
+
+        function listStyle(style) {
+            const ml = document.getElementById("myList");
+            ml.setAttribute("class", style);
+        }
+
+    </script>
+</head>
+
+<body>
+
+<p>Click the link to choose the type of list to render this as.</p>
+
+<p>&nbsp;</p>
+
+<div id="myList" class="nav_container">
+    <ul>
+        <li><a href="javascript: listStyle('');">Default</a></li>
+        <li><a href="javascript: listStyle('nav_container');">In-Line</a></li>
+        <li><a href="javascript: listStyle('noBullet');">No-Bullet Vertical</a></li>
+    </ul>
+</div>
+
+<p>&nbsp;</p>
+
+
+</body>
+
+</html>

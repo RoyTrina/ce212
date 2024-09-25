@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <title>Open Window and Load File</title>
+    <script type="text/javascript">
+        let w;
+        let counter;
+        let pre;
+
+        function openFile(url) {
+            w = window.open();
+            w.location = url;
+        }
+
+        function upperCase(node) {
+            if (node.nodeType === Node.ELEMENT_NODE) {
+                for (let m = node.firstChild; m != null; m = m.nextSibling)
+                    upperCase(m);
+            } else if (node.nodeType === Node.TEXT_NODE) {
+                node.data = node.data.toUpperCase();
+            }
+        }
+
+        function retrieveText() {
+            pre = document.getElementById("count");
+            counter = 0;
+            retrieve(w.document.body);
+            pre.textContent = "Found " + counter + " text nodes";
+
+        }
+
+        function retrieve(node) {
+            if (node.nodeType === Node.ELEMENT_NODE) {
+                for (let m = node.firstChild; m != null; m = m.nextSibling)
+                    retrieve(m);
+            } else if (node.nodeType === Node.TEXT_NODE) {
+                const p = document.createElement("p");
+                p.appendChild(document.createTextNode(node.data));
+                pre.parentNode.insertBefore(p, pre);
+                counter++;
+            }
+        }
+
+
+    </script>
+
+</head>
+<body>
+<p>Filename: <label for="url"></label><input id="url" name="url" size=15 type="Text"/></p>
+<a href="javascript:openFile(document.getElementById('url').value)">Open document</a><br>
+<a href="javascript:upperCase(w.document.body)">To upper case</a><br/>
+<a href="javascript:retrieveText(w.document.body)">Retrieve text</a><br/>
+<pre id="count"> &nbsp; </pre>
+<br/>
+</body>
+</html>

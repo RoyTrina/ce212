@@ -1,0 +1,79 @@
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Language" content="en-gb">
+    <title>JavaScript</title>
+    <style>
+        h2 {
+            text-align: center;
+            color: blue
+        }
+
+        body {
+            margin: 1em;
+            width: 400px
+        }
+
+        h3 {
+            color: navy
+        }
+
+        pre {
+            margin: 2em;
+            background: #EEFFFF;
+            padding: 1em;
+            border: 1px solid navy;
+        }
+
+        td {
+            text-align: center
+        }
+
+        .main {
+            width: 400px
+        }
+
+    </style>
+
+    <script src="jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        function setCol(col) {
+            let par = jQuery("#para");
+            par.css("color", col);
+        }
+
+        function setStyle() {
+            const par = jQuery("#para");
+            const col = jQuery("#colour").val();
+            const al = jQuery("#align").val();
+            par.css("color", col).css("text-align", al);
+        }
+    </script>
+
+</head>
+<body class="main">
+
+<h3>Drop-down menu Test</h3>
+
+<p id="para" style="{color:blue}">Select a colour for this text</p>
+
+
+<form onSubmit="setStyle(); return false">
+    <label for="colour"></label><select id="colour">
+        <option value="red"> Red</option>
+        <option value="green"> Green</option>
+        <option value="blue"> Blue</option>
+    </select>
+    <label for="align"></label><select id="align">
+        <option value="left"> Left</option>
+        <option value="right"> Right</option>
+        <option value="center"> Center</option>
+    </select>
+    <input type="submit" value="Submit"/>
+</form>
+<pre id="pre"> &nbsp; </pre>
+
+</body>
+</html>
+
+

@@ -1,0 +1,19 @@
+<html lang="en">
+<head>
+    <title>Lab 2 exercise</title>
+    <script src="getDay.js" type="text/javascript">
+    </script>
+
+</head>
+<body>
+<form action="javaScript:getDay(parseInt(document.getElementById('f1').value),parseInt(document.getElementById('f2').value));">
+    First day of month (0=sun) <label for="f1"></label><input type="text" id="f1"/><br/>
+    Number of days in month <label for="f2"></label><input type="text" id="f2"><br/>
+    <input type="submit" value="Submit"/>
+</form>
+
+<p>Selected date:
+    <b id="selection">&nbsp;</b>
+</p>
+</body>
+</html>

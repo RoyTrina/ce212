@@ -1,0 +1,24 @@
+body {
+    background: lightgreen;
+}
+
+#ex2 {
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    table-layout: fixed;
+    padding-left: 400px;
+}
+
+#ex2 td {
+    word-wrap: break-word;
+    color: darkgreen;
+}
+
+#ex2 th {
+    color: red;
+    text-align: center;
+}
+
+#ex2 th, td {
+    padding: 10px;
+}

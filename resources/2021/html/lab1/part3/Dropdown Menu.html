@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DropDown Menu</title>
+</head>
+<script src="/resources/2021/js/part3/jquery-3.3.1.min.js" type="text/javascript">
+    function setColor(color) {
+        const par = $('#para');
+        par.css("color", color);
+    }
+
+    function setStyle() {
+        const color = $("#color").val();
+        const position = $("#position").val();
+
+        color.css("color", color);
+        position.css("text-align", position);
+
+
+    }
+</script>
+<body>
+<h3>Drop-down menu Test</h3>
+
+<p id="para">Select a colour for this text</p>
+
+<p>The colour of this paragraph will not change</p>
+
+<form>
+    <label>
+        <select id="color">
+            <option value="red" style="color: darkred"> Red</option>
+            <option value="green" style="color:darkgreen"> Green</option>
+            <option value="blue" style="color: darkblue"> Blue</option>
+        </select>
+    </label>
+    <label>
+        <select id="position">
+            <option value="left">Left</option>
+            <option value="right">Right</option>
+            <option value="center">Center</option>
+        </select>
+    </label>
+    <input type="submit" value="submit" onclick="setStyle(); return false">
+
+</form>
+
+
+</body>
+</html>

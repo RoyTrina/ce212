@@ -1,0 +1,56 @@
+h2 {
+    text-align: center;
+    color: blue;
+    background: #efefef;
+}
+
+body {
+    margin: 4em;
+    width: 400px;
+}
+
+h3 {
+    color: navy;
+}
+
+pre {
+    margin: 2em;
+    background: #EFEFEF;
+    padding: 1em;
+    border: 1px solid navy;
+}
+
+td {
+    text-align: center;
+}
+
+.callout {
+    margin: 1em;
+    width: 200px;
+    border: 2px solid navy;
+    background: #efefef;
+    float: right;
+}
+
+.end {
+    text-align: center;
+    color: grey;
+    font-size: small;
+}
+
+.study {
+    color: gray;
+    background: #efefef;
+}
+
+th {
+    background: hotpink;
+}
+
+tr.even {
+    background: white
+}
+
+tr.odd {
+    background: plum;
+}
